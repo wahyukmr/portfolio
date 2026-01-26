@@ -1,0 +1,7 @@
+{
+	"printWidth": 100,
+	"singleQuote": false,
+	"useTabs": true,
+	"endOfLine": "lf",
+	"quoteProps": "preserve"
+}
