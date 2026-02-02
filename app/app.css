@@ -1,12 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+@theme {
+	--font-generalSans: 'General Sans', sans-serif;
+	--font-publicSans: 'Public Sans', sans-serif;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+	--color-error: #e84e4f;
+
+	--color-primary-100: #e05297;
+	--color-primary-200: #f3bad6;
+	--color-primary-300: #e0e2e5;
+
+	--color-accent-100: #f5be0b;
+	--color-accent-200: #fef1c7;
+
+	/* Background pada light theme */
+	--color-light-bg: #f0f5f9; /* Primary background */
+	--color-light-surface: #e1e9f2; /* Secondary surface, Cards, panels */
+	--color-light-surface2: #d2d2db; /* Tertiary surface, Dropdowns, tooltips */
+	--color-light-border: #c3d1de; /* Dividers, borders */
+	--color-light-hover: #e6eef5; /* Hover/active state on surfaces */
+	--color-light-overlay: rgba(240, 245, 249, 0.75); /* Modal overlay/translucent */
+
+	/* Teks pada light theme */
+	--color-dark-text: #111827; /* Primary text, kontras tertinggi */
+	--color-dark-text100: #1f2937; /* Subtitle / teks sekunder paling gelap */
+	--color-dark-text200: #374151; /* Teks sekunder */
+	--color-dark-text300: #4b5563; /* Teks tersier / placeholder */
+	--color-dark-text400: #6b7280; /* Teks disabled atau info minor */
+
+	/* Background pada dark theme */
+	--color-dark-bg: #111827; /* Primary background, very dark */
+	--color-dark-surface: #1f2937; /* Secondary surface, cards/panels */
+	--color-dark-surface2: #374151; /* Tertiary surface, e.g. dropdowns */
+	--color-dark-border: #4b5563; /* Divider, borders */
+	--color-dark-hover: #27272a; /* Hover/active state on surfaces */
+	--color-dark-overlay: rgba(17, 24, 39, 0.75); /* Modal overlay/translucent bg */
+
+	/* Teks pada dark theme */
+	--color-light-text: #f9fafb; /*  kontrast tertinggi untuk teks utama  */
+	--color-light-text100: #e5e7eb; /*  subtitle / teks sekunder paling terang  */
+	--color-light-text200: #d1d5db; /*  teks sekunder  */
+	--color-light-text300: #9ca3af; /*  teks tersier / placeholder  */
+	--color-light-text400: #6b7280; /*  teks disabled atau info minor  */
+
+	--breakpoint-xs: 28rem; /* 448px */
+
+	--backgroundImage-terminal: url('/assets/terminal.png');
+
+	--default-transition-duration: 300ms;
+	--default-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+	--heading-title: 2.25rem; /* h1 */
+	--heading-subtitle: 1.5rem; /* h2 */
+	--heading-section: 1.25rem; /* h3 */
+	--heading-default: 1rem; /* h4 */
 }
