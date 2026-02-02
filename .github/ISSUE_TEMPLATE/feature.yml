@@ -1,0 +1,28 @@
+name: 🚀 Feature Request
+description: Propose a new feature or enhancement
+title: "[FEATURE] "
+labels: ["feature"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: What problem does this feature solve?
+      placeholder: As a user, I want...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Acceptance Criteria
+      description: Conditions that must be met to consider this issue done
+      placeholder: |
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Notes
+      description: Additional context, mockups, references (optional)
+      required: false
