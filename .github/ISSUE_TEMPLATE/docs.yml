@@ -1,0 +1,18 @@
+name: 📄 Documentation
+description: Improve or add documentation
+title: "[DOCS] "
+labels: ["docs"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: What documentation needs to be updated or added?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - [ ] Documentation is clear
+        - [ ] Easy to understand for new developers
