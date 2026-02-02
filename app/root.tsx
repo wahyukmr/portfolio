@@ -1,3 +1,5 @@
+import './app.css';
+
 import {
   isRouteErrorResponse,
   Links,
@@ -8,31 +10,62 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import stylesheet from "./app.css?url";
 
-export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  },
-  { rel: "stylesheet", href: stylesheet },
-];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
+				<meta name="google-site-verification" content="your-verification-code" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta charSet="utf-8" />
+				<meta name="author" content="Wahyu Komarudin Hidayah" />
+				<meta name="robots" content="all" />
+				<meta name="googlebot" content="notranslate" />
+
+				{/* Open Graph */}
+				<meta property="og:type" content="website" />
+
+				{/* Twitter */}
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:domain" content="nama-domain-anda.com" />
+
+				{/* PWA */}
+				<meta name="theme-color" content="#f0f5f9" />
+				<meta name="msapplication-TileColor" content="#f0f5f9" />
+				<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+				<meta name="msapplication-config" content="/browserconfig.xml" />
+
+				{/* Favicons */}
+				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="shortcut icon" href="/favicon.ico" />
+				<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+				<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+				<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+				{/* Apple Touch Icons */}
+				<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+				<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+				<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+				<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+				<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+				<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+				<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+
+				{/* Google Fonts */}
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+					rel="stylesheet"
+				/>
+				<link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet" />
+
+				<Meta />
+				<Links />
+			</head>
       <body>
         {children}
         <ScrollRestoration />
