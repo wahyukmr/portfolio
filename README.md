@@ -1,74 +1,53 @@
-# React Router Netlify Template
+# Portfolio
 
-A modern, production-ready template for building full-stack React applications using React Router,
-deployed to Netlify.
+A modern, responsive portfolio website showcasing professional work and achievements. Created by [wahyu komarudin hidayah](https://github.com/wahyukmr).
 
-## Features
+This portfolio platform is designed for developers and designers to create an impressive online presence, showcase their projects, skills, and experience to potential employers and clients.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-- 💻 Configured for deployment to Netlify
+## 🚀 Overview
+A full-stack portfolio platform built with modern web technologies to help developers and designers showcase their work effectively. This platform provides an intuitive interface for creating an impressive online presence, managing projects, and connecting with potential employers and clients. It combines responsive design with performance optimization to ensure your portfolio looks great on all devices.
 
-## Getting Started
+## 🧩 Features
+- Feature A
+- Feature B
+- Feature C
 
-### Installation
+## 🛠️ Tech Stack
+- Node.js
+- React / Backend Framework / etc
 
-Install the dependencies:
-
+## ⚙️ Installation
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
-
+## ▶️ Run Locally
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
+## 📦 Build
 ```bash
 npm run build
 ```
 
-## Previewing a Production build
-
-To preview a production build locally, use the [Netlify CLI](https://cli.netlify.com):
-
+## 🧪 Testing
 ```bash
-npx netlify-cli serve
+npm test
 ```
 
-```bash
-npm run build
-```
+## 🚧 Status
 
-## Deployment
+In active development.
 
-This template is preconfigured for deployment to Netlify.
+## 📄 Documentation
 
-Follow <https://docs.netlify.com/welcome/add-new-site/> to add this project as a site
-in your Netlify account.
+See `/docs` directory for more details.
 
-## Styling
+## 🤝 Contributing
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Please read [CONTRIBUTING.md](https://github.com/wahyukmr/portfolio/CONTRIBUTING.md) before contributing.
 
-## See also
+## 📜 License
 
-[Guide: how to deploy a React Router 7 site to Netlify](https://developers.netlify.com/guides/how-to-deploy-a-react-router-7-site-to-netlify/)
-
----
-
-Built with ❤️ using React Router.
+This project is licensed under the MIT License.
