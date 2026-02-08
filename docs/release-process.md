@@ -7,7 +7,7 @@ MAJOR.MINOR.PATCH
 ## Steps
 1. Ensure develop is stable
 2. Merge develop into main
-3. Update CHANGELOG.md
+3. Update `/CHANGELOG.md`
 4. Create git tag
 5. Push tag to repository
 
