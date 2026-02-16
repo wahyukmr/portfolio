@@ -35,7 +35,6 @@ export default defineConfig([
 	eslint.configs.recommended,
 	tseslint.strict,
 	tseslint.stylistic,
-	react.configs.flat.recommended,
 	reactHooks.configs.flat.recommended,
 	jsxA11y.flatConfigs.recommended,
 
@@ -54,6 +53,7 @@ export default defineConfig([
 			},
 		},
 		plugins: {
+			react,
 			"react-refresh": reactRefresh,
 			"unused-imports": unusedImports,
 			"simple-import-sort": simpleImportSort,
@@ -61,6 +61,8 @@ export default defineConfig([
 		extends: [importPlugin.flatConfigs.recommended, importPlugin.flatConfigs.typescript],
 		languageOptions: { globals: { ...globals.browser, ...globals.node } },
 		rules: {
+			...react.configs.recommended.rules,
+			
 			// Disable rules that TypeScript already handles / conflicts
 			"no-undef": "off",
 			"no-unused-vars": "off",
