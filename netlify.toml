@@ -1,9 +1,11 @@
-[build.environment]
-NODE_VERSION = "20"
-
 [build]
 command = "react-router build"
 publish = "build/client"
+environment = { NODE_VERSION = "20.20.0" }
 
 [dev]
 command = "react-router dev"
+
+[[edge_functions]]
+  path = "/"
+  function = "locale"
