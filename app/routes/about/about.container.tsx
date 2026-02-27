@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function AboutContainer(): React.JSX.Element {
-  return (
-    <div>AboutContainer</div>
-  )
+	return <div>AboutContainer</div>;
 }

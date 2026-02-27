@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-import LayoutView from './layout.view'
+import LayoutView from "./layout.view";
 
 export default function LayoutContainer(): React.JSX.Element {
-  return (
-    <LayoutView />
-  )
+	return <LayoutView />;
 }
