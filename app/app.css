@@ -1,8 +1,8 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-	--font-generalSans: 'General Sans', sans-serif;
-	--font-publicSans: 'Public Sans', sans-serif;
+	--font-generalSans: "General Sans", sans-serif;
+	--font-publicSans: "Public Sans", sans-serif;
 
 	--color-error: #e84e4f;
 
@@ -19,7 +19,12 @@
 	--color-light-surface2: #d2d2db; /* Tertiary surface, Dropdowns, tooltips */
 	--color-light-border: #c3d1de; /* Dividers, borders */
 	--color-light-hover: #e6eef5; /* Hover/active state on surfaces */
-	--color-light-overlay: rgba(240, 245, 249, 0.75); /* Modal overlay/translucent */
+	--color-light-overlay: rgba(
+		240,
+		245,
+		249,
+		0.75
+	); /* Modal overlay/translucent */
 
 	/* Teks pada light theme */
 	--color-dark-text: #111827; /* Primary text, kontras tertinggi */
@@ -34,7 +39,12 @@
 	--color-dark-surface2: #374151; /* Tertiary surface, e.g. dropdowns */
 	--color-dark-border: #4b5563; /* Divider, borders */
 	--color-dark-hover: #27272a; /* Hover/active state on surfaces */
-	--color-dark-overlay: rgba(17, 24, 39, 0.75); /* Modal overlay/translucent bg */
+	--color-dark-overlay: rgba(
+		17,
+		24,
+		39,
+		0.75
+	); /* Modal overlay/translucent bg */
 
 	/* Teks pada dark theme */
 	--color-light-text: #f9fafb; /*  kontrast tertinggi untuk teks utama  */
@@ -45,7 +55,7 @@
 
 	--breakpoint-xs: 28rem; /* 448px */
 
-	--backgroundImage-terminal: url('/assets/terminal.png');
+	--backgroundImage-terminal: url("/assets/terminal.png");
 
 	--default-transition-duration: 300ms;
 	--default-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -54,4 +64,11 @@
 	--heading-subtitle: 1.5rem; /* h2 */
 	--heading-section: 1.25rem; /* h3 */
 	--heading-default: 1rem; /* h4 */
+}
+
+/* @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *)); */
+@custom-variant dark {
+	&:where(.dark *, .dark) {
+		@slot;
+	}
 }
