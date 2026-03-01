@@ -2,6 +2,7 @@ import "./app.css";
 
 import React from "react";
 import {
+	data,
 	isRouteErrorResponse,
 	Link,
 	Links,
@@ -9,17 +10,23 @@ import {
 	Outlet,
 	Scripts,
 	ScrollRestoration,
+	useRouteLoaderData,
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import { initializeCookie } from "./cookies.server";
 
 const SUPPORTED_LOCALES = ["en", "id"];
 
-export function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params, request }: Route.LoaderArgs) {
 	if (!SUPPORTED_LOCALES.includes(params.locale || "")) {
 		throw new Response("Locale not supported", { status: 404 });
 	}
-	return null;
+
+	const cookieHeader = request.headers.get("Cookie");
+	const theme = await initializeCookie("theme").parse(cookieHeader);
+
+	return data({ theme, locale: params.locale });
 }
 
 export function Layout({
@@ -27,8 +34,13 @@ export function Layout({
 }: {
 	children: React.ReactNode;
 }): React.JSX.Element {
+	const { theme, locale } = useRouteLoaderData<typeof loader>("root") || {
+		theme: "dark",
+		locale: "en",
+	};
+
 	return (
-		<html lang="en">
+		<html lang={locale} className={theme}>
 			<head>
 				<meta
 					name="google-site-verification"
