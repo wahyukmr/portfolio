@@ -25,4 +25,3 @@ body:
     attributes:
       label: Notes
       description: Additional context, mockups, references (optional)
-      required: false
