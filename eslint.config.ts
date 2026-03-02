@@ -3,6 +3,7 @@ import { defineConfig } from "eslint/config";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importPlugin from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+import prettierRecommended from "eslint-plugin-prettier/recommended";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
@@ -10,7 +11,7 @@ import simpleImportSort from "eslint-plugin-simple-import-sort";
 import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 import path from "path";
-import {configs as tseslint} from 'typescript-eslint'
+import { configs as tseslint } from "typescript-eslint";
 
 export default defineConfig([
 	// ======================
@@ -35,7 +36,6 @@ export default defineConfig([
 	eslint.configs.recommended,
 	tseslint.strict,
 	tseslint.stylistic,
-	react.configs.flat.recommended,
 	reactHooks.configs.flat.recommended,
 	jsxA11y.flatConfigs.recommended,
 
@@ -44,23 +44,17 @@ export default defineConfig([
 	// ======================
 	{
 		files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-		settings: {
-			react: { version: "detect" },
-			"import/resolver": {
-				typescript: createTypeScriptImportResolver({
-					alwaysTryTypes: true,
-					project: path.resolve("./tsconfig.json"),
-				}),
-			},
-		},
+		languageOptions: { globals: { ...globals.browser, ...globals.node } },
 		plugins: {
+			react,
 			"react-refresh": reactRefresh,
 			"unused-imports": unusedImports,
 			"simple-import-sort": simpleImportSort,
 		},
 		extends: [importPlugin.flatConfigs.recommended, importPlugin.flatConfigs.typescript],
-		languageOptions: { globals: { ...globals.browser, ...globals.node } },
 		rules: {
+			...react.configs.recommended.rules,
+
 			// Disable rules that TypeScript already handles / conflicts
 			"no-undef": "off",
 			"no-unused-vars": "off",
@@ -108,6 +102,15 @@ export default defineConfig([
 			"@typescript-eslint/explicit-function-return-type": "off",
 			"@typescript-eslint/explicit-module-boundary-types": "off",
 		},
+		settings: {
+			react: { version: "detect" },
+			"import/resolver": {
+				typescript: createTypeScriptImportResolver({
+					alwaysTryTypes: true,
+					project: path.resolve("./tsconfig.json"),
+				}),
+			},
+		},
 	},
 
 	// =========================================
@@ -119,4 +122,6 @@ export default defineConfig([
 			"no-console": "off",
 		},
 	},
+
+	prettierRecommended,
 ]);

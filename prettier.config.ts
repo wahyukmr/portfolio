@@ -1,0 +1,11 @@
+export default {
+	printWidth: 80,
+	singleQuote: false,
+	useTabs: true,
+	endOfLine: "lf",
+	quoteProps: "preserve",
+
+	plugins: ["prettier-plugin-tailwindcss"],
+	tailwindStylesheet: "./app/app.css",
+	tailwindFunctions: ["clsx"],
+};
