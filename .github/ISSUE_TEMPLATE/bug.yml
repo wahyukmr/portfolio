@@ -23,11 +23,13 @@ body:
   - type: textarea
     attributes:
       label: Expected Behavior
+    validations:
       required: true
 
   - type: textarea
     attributes:
       label: Actual Behavior
+    validations:
       required: true
 
   - type: input
