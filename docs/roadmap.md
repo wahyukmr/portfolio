@@ -40,6 +40,8 @@
 
 ### Scope MVP locked
 
+- Simple 3D animation
+- Light GSAP
 - Locale & theme implementation
 - Home (positioning + CTA)
 - Projects: 2 study cases
